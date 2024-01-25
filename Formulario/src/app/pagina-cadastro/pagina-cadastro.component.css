@@ -1,0 +1,44 @@
+.cadastro-container-x{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cadastro-container-y{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nome-sobrenome{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+    gap: 5%;
+}
+
+.sobrenome{
+    display: flex;
+    width: 50%;
+}
+
+.nome{
+    display: flex;
+    width: 50%;
+}
+
+.logradouro-numerorua {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+    gap: 5%;
+
+}
+
+.logradouro {
+    display: flex;
+    width: 140%;
+}

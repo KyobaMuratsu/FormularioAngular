@@ -1,9 +1,16 @@
-<main>
-    <form>
-        <mat-form-field>
-            <mat-label>Nome</mat-label>
-            <input matInput>
-        </mat-form-field>
+<app-header></app-header>
+<main class="cadastro-container-x">
+    <div class="cadastro-container-y">
+        <section class="nome-sobrenome">
+            <mat-form-field class="nome">
+                <mat-label>Nome</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field class="sobrenome">
+                <mat-label>Sobrenome</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </section>
         <mat-form-field>
             <mat-label>Data de Nascimento</mat-label>
             <input matInput [matDatepicker]="picker">
@@ -15,7 +22,6 @@
             <mat-label>Email</mat-label>
             <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
                 placeholder="Ex. pat@example.com">
-            <mat-hint>Errors appear instantly!</mat-hint>
             @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
             <mat-error>Please enter a valid email address</mat-error>
             }
@@ -23,8 +29,18 @@
             <mat-error>Email is <strong>required</strong></mat-error>
             }
         </mat-form-field>
-        
-        <input type="file" accept="image/*" capture="enviroment">
 
-    </form>
+        <section class="logradouro-numerorua">
+            <mat-form-field class="logradouro">
+                <mat-label>Logradouro</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field class="numerorua">
+                <mat-label>Numero</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </section>
+        
+        <input type="file" accept="image/*" capture="enviroment" multiple>
+    </div>
 </main>
