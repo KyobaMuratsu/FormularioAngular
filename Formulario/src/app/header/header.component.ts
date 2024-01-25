@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, input } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -15,6 +15,8 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent implements OnInit {
 
   isPhonePortrait = false;
+
+  @Input() titleT = '';
 
   constructor(private responsive: BreakpointObserver){
 

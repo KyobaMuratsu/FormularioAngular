@@ -29,6 +29,8 @@ export class PaginaCadastroComponent implements OnInit {
 
   matcher = new MyErrorStateMatcher();
 
+  title = 'Cadastro';
+
   constructor(private responsive: BreakpointObserver){
 
   }

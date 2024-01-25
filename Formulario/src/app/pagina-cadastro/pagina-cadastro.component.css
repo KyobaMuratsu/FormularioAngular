@@ -42,3 +42,27 @@
     display: flex;
     width: 140%;
 }
+
+.bairro-cidade{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+    gap: 5%;
+
+}
+
+
+.estado-cep{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+    gap: 5%;
+
+}
+
+.estado{
+    display: flex;
+    width: 120%;
+}

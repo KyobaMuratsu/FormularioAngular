@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header [titleT]="title"></app-header>
 <main class="cadastro-container-x">
     <div class="cadastro-container-y">
         <section class="nome-sobrenome">
@@ -40,6 +40,33 @@
                 <input matInput>
             </mat-form-field>
         </section>
+
+        <section class="bairro-cidade">
+            <mat-form-field class="bairro">
+                <mat-label>Bairro</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field class="cidade">
+                <mat-label>Cidade</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </section>
+
+        <section class="estado-cep">
+            <mat-form-field class="estado">
+                <mat-label>Estado</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field class="cep">
+                <mat-label>CEP</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </section>
+
+        <mat-form-field>
+            <mat-label>Complemento</mat-label>
+            <input matInput>
+        </mat-form-field>
         
         <input type="file" accept="image/*" capture="enviroment" multiple>
     </div>
