@@ -9,6 +9,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-header',
   standalone: true,
+  providers: [],
   imports: [MatToolbarModule, MatIconModule, MatButtonModule, CommonModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
@@ -51,11 +52,6 @@ export class HeaderComponent implements OnInit {
           console.log("screens match PHONE");
           this.isPhonePortrait = true
         }
-
-        if(this.isTabletPortrait === false){
-            this.isDesktop = true;
-        }else
-            this.isDesktop = false;
 
       })
   }

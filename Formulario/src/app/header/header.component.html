@@ -2,16 +2,7 @@
 <mat-toolbar>
     <span>{{titleT}}</span>
     <span class="spacing"></span>
-
-    @if (isTabletPortrait) {
-      <button mat-icon-button class="showMenu" 
-      [ngClass]="{'is-phone-portrait': isPhonePortrait}"
-      [ngClass]="{'is-phone-portrait' : isTabletPortrait}" 
-      [ngClass]="{'is-phone-portrait' : isTabletLandscape}">
-          <mat-icon>menu</mat-icon>
-      </button>
-    }
-    <button mat-icon-button routerLink="/" class="showMenu" [ngClass]="{'is-desktop' : isDesktop}">
+    <button mat-icon-button routerLink="/" class="showMenu">
       <mat-icon>home</mat-icon>
     </button>
 </mat-toolbar>
