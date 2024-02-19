@@ -66,3 +66,15 @@
     display: flex;
     width: 120%;
 }
+
+.images{
+    height: 60px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.image-input {
+    display: flex;
+    flex-direction: column;
+}

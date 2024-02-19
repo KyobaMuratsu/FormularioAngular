@@ -13,7 +13,7 @@ import { HeaderComponent } from '../header/header.component';
 })
 export class TelaInicialComponent {
 
-  title = 'Tela inicial';
+  title = 'Codefi';
 
   constructor(private dataService: DataService) {
     

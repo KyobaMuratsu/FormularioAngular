@@ -15,7 +15,7 @@
             <mat-form-field>
                 <mat-label>Data de Nascimento</mat-label>
                 <input matInput [matDatepicker]="picker" id="datanascimento" formControlName="datanascimento">
-                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-hint>DD/MM/YYYY</mat-hint>
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -69,8 +69,17 @@
                 <input matInput id="complemento" formControlName="complemento">
             </mat-form-field>
             
-            <input type="file" accept="image/*" capture="environment"  multiple>
-            
+            <div class="image-input">
+                <input type="file" accept="image/*" capture="environment"  multiple (change)="onFileSelected($event)">
+            </div>
+
+            <div class="images">
+                @for (imagem of images; track $index) {
+                    <div>
+                        <img [src]="imagem.url" alt="Imagem" class="images">
+                    </div>
+                }
+            </div>
             <button mat-raised-button color="primary" type="submit">Concluir</button>
         </form>
     </div>
