@@ -20,6 +20,7 @@ import {
 } from '@angular/forms';
 import { HeaderComponent } from '../header/header.component';
 import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
+import { CommonModule } from '@angular/common';
 
 const MY_DATE_FORMATS = {
   parse: {
@@ -39,13 +40,17 @@ const MY_DATE_FORMATS = {
   providers: [    { provide: MAT_DATE_LOCALE, useValue: 'pt' },
                   { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS },
                   provideNativeDateAdapter()],
-  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, MatDatepickerModule, FormsModule, ReactiveFormsModule, HeaderComponent, MatIconModule, MatButtonModule],
+  imports: [MatFormFieldModule, MatInputModule, MatSelectModule, MatDatepickerModule, FormsModule, ReactiveFormsModule, HeaderComponent, MatIconModule, MatButtonModule, CommonModule],
   templateUrl: './pagina-cadastro.component.html',
   styleUrl: './pagina-cadastro.component.css'
 })
 
 
 export class PaginaCadastroComponent implements OnInit {
+
+  isDektop = false;
+  isPhonePortrait = false;
+
   formulario: FormGroup = this.fb.group({});
   matcher = new MyErrorStateMatcher();
   title = 'Codefi';
@@ -69,6 +74,9 @@ export class PaginaCadastroComponent implements OnInit {
 
   ngOnInit() {
     
+    this.isDektop = false;
+    this.isPhonePortrait = false;
+
     this.formulario = this.fb.group({
       nome: this.nome,
       sobrenome: this.sobrenome,
@@ -84,17 +92,21 @@ export class PaginaCadastroComponent implements OnInit {
       imagem: this.fb.array([])
     })
     
-    this.responsive.observe([Breakpoints.HandsetLandscape, Breakpoints.TabletPortrait]).subscribe(result => {
+    this.responsive.observe([Breakpoints.HandsetPortrait, Breakpoints.TabletPortrait, Breakpoints.WebLandscape]).subscribe(result => {
 
         const breakpoints = result.breakpoints
 
-        if (breakpoints[Breakpoints.TabletPortrait]){
+        if (breakpoints[Breakpoints.HandsetPortrait]){
           console.log("screens matches")
-        }
+          this.isPhonePortrait = true;
+        }else
+          this.isPhonePortrait = false;
 
-        if (breakpoints[Breakpoints.HandsetLandscape]) {
-
-        }
+        if (breakpoints[Breakpoints.WebLandscape]){
+          console.log("screens matches PC")
+          this.isDektop = true;
+        }else
+          this.isDektop = false;
 
       })
   }

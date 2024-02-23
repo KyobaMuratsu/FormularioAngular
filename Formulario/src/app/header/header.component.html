@@ -2,7 +2,16 @@
 <mat-toolbar color="primary">
     <span>{{titleT}}</span>
     <span class="spacing"></span>
-    <button mat-icon-button routerLink="/" class="showMenu">
-      <mat-icon>home</mat-icon>
+    @if(isPhonePortrait){
+    <button mat-icon-button [mat-menu-trigger-for]="menu">
+      <mat-icon>menu</mat-icon>
     </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/">Voltar</button>
+    </mat-menu>
+    }@else{
+      <button mat-icon-button routerLink="/" class="showMenu">
+        <mat-icon>home</mat-icon>
+      </button>
+    }
 </mat-toolbar>

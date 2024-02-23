@@ -3,6 +3,8 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .cadastro-container-y{
@@ -15,8 +17,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 380px;
+    width: 98vw;
     gap: 5%;
+}
+
+.nome-sobrenome.is-desktop{
+    width: 30vw;
 }
 
 .sobrenome{
@@ -29,52 +35,156 @@
     width: 50%;
 }
 
+.datanascimento {
+    width: 98vw;
+}
+
+.datanascimento.is-desktop {
+    width: 30vw;
+}
+
+.email {
+    width: 98vw;
+}
+
+.email.is-desktop {
+    width: 30vw;
+}
+
 .logradouro-numerorua {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 380px;
+    width: 98vw;
     gap: 5%;
+}
 
+.logradouro-numerorua.is-desktop {
+    width: 30vw;
 }
 
 .logradouro {
     display: flex;
-    width: 140%;
+    width: 80%;
 }
 
 .bairro-cidade{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 380px;
+    width: 98vw;
     gap: 5%;
-
 }
 
+.bairro-cidade.is-desktop {
+    width: 30vw;
+}
 
 .estado-cep{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 380px;
+    width: 98vw;
     gap: 5%;
+}
 
+.estado-cep.is-desktop{
+    width: 30vw;
 }
 
 .estado{
     display: flex;
-    width: 120%;
+    width: 80%;
 }
 
-.images{
-    height: 60px;
-    width: auto;
+.complemento{
+    width: 98vw;
+}
+
+.complemento.is-desktop{
+    width: 30vw;
+}
+
+.input-images{
+    width: 98vw;
+}
+
+.input-images.is-desktop{
+    height: 50px;
+    width: 50px;
+}
+
+.container-images{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.image-input {
+.container-images.is-desktop{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
 }
+
+.images {
+    height: auto;
+    width: 97vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    background-color: white;
+    border: 2px solid rgb(73, 73, 73);
+    flex-wrap: wrap;
+  }
+
+  .images.is-desktop {
+    height: auto;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    background-color: white;
+    border: 2px solid rgb(73, 73, 73);
+    flex-wrap: wrap;
+  }
+  
+  .images-image {
+    flex: 0 0 auto;
+    object-fit: cover; /* Para ajustar o comportamento da imagem no espaço disponível */
+    height: 60px;
+    width: auto;
+  }
+
+  .images-image.is-desktop {
+    flex: 0 0 auto;
+    object-fit: cover; /* Para ajustar o comportamento da imagem no espaço disponível */
+    height: 200px;
+    width: auto;
+  }
+
+  .submit{
+    width: 98vw;
+  }
+
+  .submit.is-desktop{
+    width: 30vw;
+  }
+
+  .vertical-line{
+    border-left: 1px solid black;
+    height: 630px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+
+  .align-to-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
